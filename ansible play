@@ -1,0 +1,23 @@
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.142.128
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.142.170
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.142.171
+ssh-copy-id -i ~/.ssh/id_rsa.pub ansiblemaster.com
+ssh-copy-id -i ~/.ssh/id_rsa.pub ansiblenode1.com
+ssh-copy-id -i ~/.ssh/id_rsa.pub ansiblenode2.com
+
+
+192.168.142.170
+ansiblenode1.com
+
+192.168.142.171
+ansiblenode2.com
+
+
+[prouction]
+192.168.142.170
+ansiblenode1.com
+
+[manager]
+192.168.142.171
+ansiblenode2.com
