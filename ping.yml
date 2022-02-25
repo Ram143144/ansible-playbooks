@@ -1,6 +1,7 @@
 ---
 - name: pinging the all servers 
-  hosts: all 
+  hosts: 
+    - all 
   tasks:
     action: ping
 
