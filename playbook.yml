@@ -1,0 +1,19 @@
+---
+- hosts: 192.168.142.182
+  become: yes
+  tasks:
+    - name: jenkins installation
+      get_url:
+        url: "http://mirrors.jenkins.io/war-stable/latest/jenkins.war"
+        dest: "/opt/tomcat/webapps"
+        state: latest
+
+
+---
+- name: file creation
+  hosts: all
+  tasks:
+  - name: test file creation
+    file:
+      path: "/opt/hello-ram"
+      state: touch
